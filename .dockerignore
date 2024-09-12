@@ -1,0 +1,42 @@
+# OS generated files
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
+
+# Node modules
+**/node_modules/
+**/.expo/
+
+# Git files
+.git
+.gitignore
+
+# Markdown files (documentation)
+**/*.md
+
+# Logs and cache files
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/lerna-debug.log*
+**/cache/
+
+# Docker-specific files
+**/Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Build artifacts
+**/dist/
+**/build/
+**/out/
+**/coverage/
+
+# Temporary files
+**/tmp/
+**/temp/
+**/*.tmp
