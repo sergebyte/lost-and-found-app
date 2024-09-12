@@ -1,35 +1,34 @@
 <a id="readme-top"></a>
 
-<!-- PROJECT DETAILS -->
 <div align="center">
 
 <h1>Lost and Found</h1>
-<h4>The ultimate solution for finding lost property</h4>
+The ultimate solution for finding lost property
 
 <p>
 <!-- Contributors -->
 <a href="https://github.com/sergebyte/lost-and-found-app/graphs/contributors">
-  <img src="https://img.shields.io/github/contributors/sergebyte/lost-and-found-app">
+<img src="https://img.shields.io/github/contributors/sergebyte/lost-and-found-app">
 </a>
 
 <!-- Commit Activity per Month -->
 <a href="https://github.com/sergebyte/lost-and-found-app/commits/main">
-  <img src="https://img.shields.io/github/commit-activity/m/sergebyte/lost-and-found-app">
+<img src="https://img.shields.io/github/commit-activity/m/sergebyte/lost-and-found-app">
 </a>
 
 <!-- Latest Tag -->
 <a href="https://github.com/sergebyte/lost-and-found-app/tags">
-  <img src="https://img.shields.io/github/v/tag/sergebyte/lost-and-found-app">
+<img src="https://img.shields.io/github/v/tag/sergebyte/lost-and-found-app">
 </a>
 
 <!-- Documentation -->
 <a href="https://github.com/sergebyte/lost-and-found-app#readme">
-  <img src="https://img.shields.io/badge/documentation-soon-orange">
+<img src="https://img.shields.io/badge/documentation-soon-orange">
 </a>
 
 <!-- License -->
 <a href="https://github.com/sergebyte/lost-and-found-app/blob/main/LICENSE">
-  <img src="https://img.shields.io/github/license/sergebyte/lost-and-found-app">
+<img src="https://img.shields.io/github/license/sergebyte/lost-and-found-app">
 </a>
 
 </p>
@@ -58,19 +57,29 @@ The Lost and Found Application is designed to help users report and find lost it
 <p align="center">
 
 <!-- Expo -->
+<a href="https://expo.dev">
 <img src="https://img.shields.io/badge/expo-000000?style=for-the-badge&logo=expo">
+</a>
 
 <!-- React Native -->
+<a href="https://reactnative.dev">
 <img src="https://img.shields.io/badge/react%20native-000000?style=for-the-badge&logo=react">
+</a>
 
 <!-- NestJS -->
+<a href="https://nestjs.com">
 <img src="https://img.shields.io/badge/nestjs-000000?style=for-the-badge&logo=nestjs&logoColor=red">
+</a>
 
 <!-- Node.js -->
+<a href="https://nodejs.org/en">
 <img src="https://img.shields.io/badge/node.js-000000?style=for-the-badge&logo=node.js">
+</a>
 
 <!-- MongoDB -->
+<a href="https://www.mongodb.com">
 <img src="https://img.shields.io/badge/mongodb-000000?style=for-the-badge&logo=mongodb">
+</a>
 
 </p>
 
@@ -83,17 +92,17 @@ To set up the project locally follow these steps:
 <p align="center">
 <!-- Git -->
 <a href="https://git-scm.com/">
-  <img src="https://img.shields.io/badge/Git-fff?style=for-the-badge&logo=git">
+<img src="https://img.shields.io/badge/Git-fff?style=for-the-badge&logo=git">
 </a>
 
 <!-- Docker -->
 <a href="https://www.docker.com/get-started">
-  <img src="https://img.shields.io/badge/Docker-fff?style=for-the-badge&logo=docker">
+<img src="https://img.shields.io/badge/Docker-fff?style=for-the-badge&logo=docker">
 </a>
 
 <!-- Node.js -->
 <a href="https://nodejs.org/en/">
-  <img src="https://img.shields.io/badge/Node.js-fff?style=for-the-badge&logo=node.js">
+<img src="https://img.shields.io/badge/Node.js-fff?style=for-the-badge&logo=node.js">
 </a>
 
 </p>
@@ -144,7 +153,7 @@ To set up the project locally follow these steps:
 
 ## 🤝 Contributing
 
-We encourage and appreciate all contributions to this project. Whether you are fixing bugs, adding new features, improving documentation, or proposing enhancements, your contributions are valuable to us.
+We encourage and appreciate all contributions to this project. Whether you are fixing bugs, adding new features, improving documentation, or proposing enhancements, your contributions are valuable to us. Thank you for your contribution, if you enjoy this project, don't forget to star it.
 
 1. Fork the repository.
 2. Create a new feature branch: (`git checkout -b feature-branch`)
