@@ -21,6 +21,11 @@ The ultimate solution for finding lost property
 <img src="https://img.shields.io/github/v/tag/sergebyte/lost-and-found-app">
 </a>
 
+<!-- Issues -->
+<a href="https://github.com/sergebyte/lost-and-found-app/issues">
+<img src="https://img.shields.io/github/issues/sergebyte/lost-and-found-app">
+</a>
+
 <!-- Documentation -->
 <a href="https://github.com/sergebyte/lost-and-found-app#readme">
 <img src="https://img.shields.io/badge/documentation-soon-orange">
@@ -28,7 +33,7 @@ The ultimate solution for finding lost property
 
 <!-- License -->
 <a href="https://github.com/sergebyte/lost-and-found-app/blob/main/LICENSE">
-<img src="https://img.shields.io/github/license/sergebyte/lost-and-found-app">
+<img src="https://img.shields.io/github/license/sergebyte/lost-and-found-app.svg">
 </a>
 
 </p>
