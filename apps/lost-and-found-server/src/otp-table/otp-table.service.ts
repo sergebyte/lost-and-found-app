@@ -28,4 +28,16 @@ export class OtpTableService {
       )
       .exec();
   }
+
+  // New function to find OTP by email
+  async findOtpByEmail(email: string): Promise<string | null> {
+    const record = await this.otpTableModel.findOne({ email }).exec();
+
+    // Return the OTP code if record exists, otherwise return null
+    return record ? record.code : null;
+  }
+  // Function to delete OTP by email
+  async deleteOtpByEmail(email: string): Promise<void> {
+    await this.otpTableModel.deleteOne({ email }).exec();
+  }
 }

@@ -5,6 +5,7 @@ import { MailServiceModule } from './mail-service/mail-service.module';
 import { ConfigModule } from '@nestjs/config';
 import { OtpTableModule } from './otp-table/otp-table.module';
 import { SendOtpModule } from './send-otp/send-otp.module';
+import { VerifyOtpModule } from './verify-otp/verify-otp.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { SendOtpModule } from './send-otp/send-otp.module';
     MailServiceModule,
     OtpTableModule,
     SendOtpModule,
+    VerifyOtpModule,
   ],
 })
 export class AppModule {}
