@@ -29,11 +29,11 @@ export class OtpTableService {
       .exec();
   }
 
-  // New function to find OTP by email
+  // New function to find the hashed OTP by email
   async findOtpByEmail(email: string): Promise<string | null> {
     const record = await this.otpTableModel.findOne({ email }).exec();
 
-    // Return the OTP code if record exists, otherwise return null
+    // Return the hashed OTP code if record exists, otherwise return null
     return record ? record.code : null;
   }
   // Function to delete OTP by email
