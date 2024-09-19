@@ -9,22 +9,18 @@ export class OtpTableService {
     @InjectModel(OtpTable.name) private otpTableModel: Model<OtpTableDocument>,
   ) {}
   // Function to replace or add OTP code and update `createdAt`
-  async replaceOrCreateOtp(
-    email: string,
-    newCode: string,
-    newCreatedAt?: Date,
-  ): Promise<OtpTable> {
-    // If `newCreatedAt` is not provided, use the current date and time
-    const updatedCreatedAt = newCreatedAt || new Date();
+  async replaceOrCreateOtp(email: string, newCode: string): Promise<OtpTable> {
+    // Calculate the new expiry date, 900 seconds from now
+    const newExpiryDate = new Date(Date.now() + 180000); // 900 seconds from now
 
     return this.otpTableModel
       .findOneAndUpdate(
         { email },
         {
-          code: newCode,
-          createdAt: updatedCreatedAt,
+          code: newCode, // Update the OTP code
+          expiryDate: newExpiryDate, // Set the new expiry date
         },
-        { new: true, upsert: true }, // Return the updated document and create if not exists
+        { new: true, upsert: true, fields: { createdAt: 1 } },
       )
       .exec();
   }

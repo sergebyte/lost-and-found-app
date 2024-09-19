@@ -11,8 +11,16 @@ export class OtpTable {
   @Prop({ required: true })
   code: string;
 
-  @Prop({ type: Date, default: Date.now, expires: 900 }) // TTL index: expires after 15 minutes
+  @Prop({ type: Date, default: Date.now })
   createdAt: Date;
+
+  @Prop({
+    type: Date,
+  })
+  expiryDate: Date;
 }
 
 export const OtpTableSchema = SchemaFactory.createForClass(OtpTable);
+
+// Ensure TTL index is set on expiryDate
+OtpTableSchema.index({ expiryDate: 1 }, { expireAfterSeconds: 0 });
