@@ -10,6 +10,7 @@ import { SessionManagementModule } from './session-management/session-management
 import { CookieValidationModule } from './cookie-validation/cookie-validation.module';
 import { CheckCookieModule } from './check-cookie/check-cookie.module';
 import { SendCookieModule } from './send-cookie/send-cookie.module';
+import { LogoutFeatureModule } from './logout-feature/logout-feature.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { SendCookieModule } from './send-cookie/send-cookie.module';
     CookieValidationModule,
     CheckCookieModule,
     SendCookieModule,
+    LogoutFeatureModule,
   ],
 })
 export class AppModule {}
