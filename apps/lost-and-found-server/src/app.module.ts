@@ -6,6 +6,10 @@ import { ConfigModule } from '@nestjs/config';
 import { OtpTableModule } from './otp-table/otp-table.module';
 import { SendOtpModule } from './send-otp/send-otp.module';
 import { VerifyOtpModule } from './verify-otp/verify-otp.module';
+import { SessionManagementModule } from './session-management/session-management.module';
+import { CookieValidationModule } from './cookie-validation/cookie-validation.module';
+import { CheckCookieModule } from './check-cookie/check-cookie.module';
+import { SendCookieModule } from './send-cookie/send-cookie.module';
 
 @Module({
   imports: [
@@ -19,6 +23,10 @@ import { VerifyOtpModule } from './verify-otp/verify-otp.module';
     OtpTableModule,
     SendOtpModule,
     VerifyOtpModule,
+    SessionManagementModule,
+    CookieValidationModule,
+    CheckCookieModule,
+    SendCookieModule,
   ],
 })
 export class AppModule {}
