@@ -13,12 +13,16 @@ export class CookieValidationService {
     private readonly sessionModel: Model<SessionDocument>,
   ) {}
 
-  async validateSessionId(sessionId: string): Promise<boolean> {
+  async validateSessionId(
+    sessionId: string,
+  ): Promise<{ isValid: boolean; userId?: string }> {
     const session = await this.sessionModel.findOne({ sessionId }).exec();
     if (!session) {
-      return false;
+      return { isValid: false };
     }
+
     // Check if the session is expired
-    return new Date() <= session.expiresAt;
+    const isValid = new Date() <= session.expiresAt;
+    return { isValid, userId: isValid ? session.userId : undefined };
   }
 }

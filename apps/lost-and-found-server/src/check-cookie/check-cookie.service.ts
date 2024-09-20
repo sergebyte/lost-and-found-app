@@ -9,7 +9,7 @@ export class CheckCookieService {
   ) {}
 
   async checkCookie(req: Request, res: Response) {
-    const sessionId = req.cookies['sessionId']; // Access the cookie named 'sessionId'
+    const sessionId = req.cookies['sessionId'];
 
     if (!sessionId) {
       return res.status(HttpStatus.BAD_REQUEST).json({
@@ -19,12 +19,13 @@ export class CheckCookieService {
     }
 
     try {
-      const isValid =
+      const { isValid, userId } =
         await this.cookieValidationService.validateSessionId(sessionId);
 
       if (isValid) {
         return res.status(HttpStatus.OK).json({
           valid: true,
+          userId, // Return the userId if session is valid
           message: 'Session is valid.',
         });
       } else {
