@@ -7,8 +7,9 @@ import {
 } from '@nestjs/common';
 import { VerifyOtpService } from './verify-otp.service';
 import { RateLimiterMemory, RateLimiterRes } from 'rate-limiter-flexible';
+import { TooManyRequestsException } from 'src/eceptions/toomanyrequests.exception';
 
-// Set up the rate limiter: 5 tries in 15 minutes
+// rate limiter: 5 tries in 15 minutes
 const otpRateLimiter = new RateLimiterMemory({
   points: 5, // Number of attempts
   duration: 15 * 60, // Per 15 minutes
@@ -27,7 +28,7 @@ export class VerifyOtpController {
       // Consume 1 point for the user email
       await otpRateLimiter.consume(email);
 
-      // Verify the OTP code using VerifyOtpService
+      // Verify the OTP code
       const isValid = await this.verifyOtpService.verifyOtp(email, otpCode);
 
       if (isValid) {
@@ -42,7 +43,7 @@ export class VerifyOtpController {
       // Check if the error is from rate-limiter
       if (error instanceof RateLimiterRes) {
         // If rate limit is exceeded, throw a custom error
-        throw new BadRequestException(
+        throw new TooManyRequestsException(
           'Too many invalid attempts. Please try again later.',
         );
       }
