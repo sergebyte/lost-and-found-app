@@ -6,14 +6,12 @@ import {
 } from '@nestjs/common';
 import { TooManyRequestsException } from 'src/eceptions/toomanyrequests.exception';
 import { SendOtpService } from './send-otp.service';
-import { RateLimiterMemory, RateLimiterRes } from 'rate-limiter-flexible';
+import { RateLimiterMemory } from 'rate-limiter-flexible';
 
 const mailRateLimiter = new RateLimiterMemory({
   points: 3, // Maximum 3 requests
   duration: 3600, // Per hour
 });
-
-const lastRequestTime: { [key: string]: number } = {};
 
 @Controller('auth')
 export class SendOtpController {
