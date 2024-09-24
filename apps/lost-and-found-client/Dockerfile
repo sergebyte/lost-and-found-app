@@ -2,9 +2,7 @@ FROM node:20-alpine AS builder
 
 # Expose the ports for the React Native Expo app
 EXPOSE 8081
-EXPOSE 19000
-EXPOSE 19001
-EXPOSE 19002
+ENV REACT_NATIVE_PACKAGER_HOSTNAME = ${LOCAL_ADDRESS}
 
 # Set the working directory
 WORKDIR /app

@@ -1,6 +1,8 @@
 services:
   client:
-    build: ./apps/lost-and-found-client/
+    build:
+      context: ./apps/lost-and-found-client/
+      dockerfile: Dockerfile
     ports:
       - "8081:8081"
     volumes:
@@ -8,6 +10,8 @@ services:
       - /app/node_modules
     depends_on:
       - server
+    environment:
+      - REACT_NATIVE_PACKAGER_HOSTNAME=${LOCAL_ADDRESS}
 
   server:
     build: ./apps/lost-and-found-server/
