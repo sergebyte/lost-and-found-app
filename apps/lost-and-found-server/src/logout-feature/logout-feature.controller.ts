@@ -1,23 +1,17 @@
-import { Controller, Post, Req, Res, HttpStatus } from '@nestjs/common';
-import { Request, Response } from 'express';
-import { LogoutFeatureService } from './logout-feature.service'; // Adjust the path as needed
+import { Controller, Post, Body, UnauthorizedException } from '@nestjs/common';
+import { LogoutFeatureService } from './logout-feature.service';
+import * as argon2 from 'argon2';
 
-@Controller()
+@Controller('auth')
 export class LogoutFeatureController {
   constructor(private readonly logoutService: LogoutFeatureService) {}
 
   @Post('logout')
-  async logout(@Req() req: Request, @Res() res: Response) {
-    try {
-      await this.logoutService.logout(req, res);
-      return res.status(HttpStatus.OK).json({
-        message: 'Successfully logged out.',
-      });
-    } catch (error) {
-      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
-        message: 'Error during logout.',
-        error: error.message,
-      });
+  async logout(@Body('refreshToken') refreshToken: string) {
+    const result = await this.logoutService.revokeRefreshToken(refreshToken);
+    if (!result) {
+      throw new UnauthorizedException('Invalid refresh token');
     }
+    return { message: 'Logout successful' };
   }
 }

@@ -6,11 +6,8 @@ import { ConfigModule } from '@nestjs/config';
 import { OtpTableModule } from './otp-table/otp-table.module';
 import { SendOtpModule } from './send-otp/send-otp.module';
 import { VerifyOtpModule } from './verify-otp/verify-otp.module';
-import { SessionManagementModule } from './session-management/session-management.module';
-import { CookieValidationModule } from './cookie-validation/cookie-validation.module';
-import { CheckCookieModule } from './check-cookie/check-cookie.module';
-import { SendCookieModule } from './send-cookie/send-cookie.module';
 import { LogoutFeatureModule } from './logout-feature/logout-feature.module';
+import { AuthJwtModule } from './auth-jwt/auth-jwt.module';
 
 @Module({
   imports: [
@@ -24,11 +21,8 @@ import { LogoutFeatureModule } from './logout-feature/logout-feature.module';
     OtpTableModule,
     SendOtpModule,
     VerifyOtpModule,
-    SessionManagementModule,
-    CookieValidationModule,
-    CheckCookieModule,
-    SendCookieModule,
     LogoutFeatureModule,
+    AuthJwtModule,
   ],
 })
 export class AppModule {}

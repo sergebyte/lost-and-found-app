@@ -10,7 +10,6 @@
   "scripts": {},
   "author": "TUM Pentalog CHI Aliens Team",
   "license": "AGPL-3.0-or-later",
-  "dependencies": {},
   "devDependencies": {
     "lerna": "^8.1.8"
   }

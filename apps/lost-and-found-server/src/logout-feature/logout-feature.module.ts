@@ -1,17 +1,17 @@
 import { Module } from '@nestjs/common';
-import { LogoutFeatureService } from './logout-feature.service';
 import { LogoutFeatureController } from './logout-feature.controller';
+import { LogoutFeatureService } from './logout-feature.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Session } from 'inspector/promises';
-import { SessionSchema } from 'src/session-management/session-management.schema';
-import { SessionManagementModule } from 'src/session-management/session-management.module';
-import { SessionManagementService } from 'src/session-management/session-management.service';
+import { RefreshTokenSchema } from 'src/auth-jwt/refresh-token.schema';
+import { JwtService } from '@nestjs/jwt';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Session.name, schema: SessionSchema }]),
+    MongooseModule.forFeature([
+      { name: 'RefreshToken', schema: RefreshTokenSchema },
+    ]),
   ],
-  providers: [LogoutFeatureService, SessionManagementService],
   controllers: [LogoutFeatureController],
+  providers: [LogoutFeatureService, JwtService],
 })
 export class LogoutFeatureModule {}
