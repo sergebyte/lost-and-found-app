@@ -31,6 +31,7 @@ import { TestController } from './test.controller';
     RefreshTokenService,
   ],
   exports: [
+    JwtModule,
     AuthJwtService,
     LoginService,
     MongooseModule,
