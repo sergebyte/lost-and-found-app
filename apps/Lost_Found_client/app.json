@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "React-Native",
+    "slug": "React-Native",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "lost-and-found",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.ReactNative"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.ReactNative"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiY3Jpc3RpYnVsYXQiLCJhIjoiY20xYzdpZGVlMjQzYjJrc2pmMGptYmNzOSJ9.Bvpy_glhUjo0oByY3Jmj9A",
+          "RNMapboxMapsVersion": "11.0.0"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Show current location on map."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "MAPBOX_PUBLIC_TOKEN": "pk.eyJ1IjoiY3Jpc3RpYnVsYXQiLCJhIjoiY2w5ZDV1NWl6MDVudjNvbXk1M3J6cWNxdCJ9.eApz9-JsGV_r2_3dRw6VJw"
+    }
+  }
+}
